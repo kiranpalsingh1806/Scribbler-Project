@@ -6,57 +6,147 @@
     <!-- TODO: Include Google Fonts file here -->
     <link rel="stylesheet" href="css/index.css">
     <script src="js/index.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 
 <body>
     
     <div class="header" id="wrapper">
         <span>
-        <button type="button" class="button1" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign Up</button>
-        <button type="button" class="button2">Sign In</button>
-        <span STYLE="font-size:50px"class ="logotitle">ScriBBler</span>
+        <button type="button" class="button1" href="#myModal2" class="trigger-btn" data-toggle="modal">Sign Up</button>
+        <button type="button" class="button2" href="#myModal" class="trigger-btn" data-toggle="modal">Sign In</button>
+        <span STYLE="font-size: 50px;margin-left: 25px;"class ="logotitle">ScriBBler</span>
     </span>
     <div>
-        <h5 class="belowlogo">Explore. Imagine. Create</h5>
+        <h5 class="belowlogo" style="margin: 2px;margin-left: 25px; font-size:22px;">Explore. Imagine. Create</h5>
     </div>
     </div>
 
     <div class="containerButton">
       <div class="centerButton">
-       <button type="button" class="button3">All Posts</button>
-        <button type="button" class="button4">Create Post</button>
+       <button type="button" class="button3" onclick="document.location='html/bloglist.html'">All Posts</button>
+        <button type="button" class="button4" href="#myModal3" class="trigger-btn" data-toggle="modal">Create Post</button>
       </div>
     </div>
 
-    <div id="id01" class="modal">
-      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-      <form class="modal-content" action="/action_page.php">
-        <div class="container">
-          <h1>Sign Up</h1>
-          <p>Please fill in this form to create an account.</p>
-          <hr>
-          <label for="email"><b>Email</b></label>
-          <input type="text" placeholder="Enter Email" name="email" required>
+<!-- Sign in Modal -->
+    <!-- Modal HTML -->
+    <div id="myModal" class="modal fade">
+      <div class="modal-dialog modal-login">
+        <div class="modal-content">
+          <div class="modal-header">        
+            <h4 class="modal-title">Welcome Back</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          </div>
+          <div class="modal-body">
+            <form action="/examples/actions/confirmation.php" method="post">
 
-          <label for="psw"><b>Password</b></label>
-          <input type="password" placeholder="Enter Password" name="psw" required>
+              <label>Username</label>
+              <div class="form-group">
+                <i class="fa fa-user"></i>
+                <input type="text" class="form-control" placeholder="Username" required="required">
+              </div>
 
-          <label for="psw-repeat"><b>Repeat Password</b></label>
-          <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
-          
-          <label>
-            <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
-          </label>
-
-          <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
-
-          <div class="clearfix">
-            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-            <button type="submit" class="signupbtn">Sign Up</button>
+              <label>Password</label>
+              <div class="form-group">
+                <i class="fa fa-lock"></i>
+                <input type="password" class="form-control" placeholder="Password" required="required">         
+              </div>
+              <div class="form-group">
+                <input type="submit" class="btn btn-primary btn-block btn-lg" value="Login">
+              </div>
+            </form>         
+          </div>
+          <div class="modal-footer">
+            <a href="#">Forgot Password?</a>
           </div>
         </div>
-      </form>
+      </div>
     </div>
+
+
+<!-- Sign Up Modal -->
+    <!-- Modal HTML -->
+    <div id="myModal2" class="modal fade">
+      <div class="modal-dialog modal-signup">
+        <div class="modal-content">
+          <div class="modal-header">        
+            <h4 class="modal-title">Get Started</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          </div>
+          <div class="modal-body">
+            <form action="/examples/actions/confirmation.php" method="post">
+                      
+                      <label>Full Name</label>
+              <div class="form-group">
+                <i class="fa fa-user"></i>
+                          
+                <input type="text" class="form-control" placeholder="Full Name" required="required">
+              </div>
+                      
+                      <label>Username</label>
+              <div class="form-group">
+                <i class="fa fa-user"></i>
+                          
+                <input type="text" class="form-control" placeholder="Username" required="required">
+              </div>
+                      <label>Password</label>
+              <div class="form-group">
+                <i class="fa fa-lock"></i>
+                <input type="password" class="form-control" placeholder="Password" required="required">         
+              </div>
+                      
+                      <label>Confirm Password</label>
+              <div class="form-group">
+                <i class="fa fa-user"></i>
+                          
+                <input type="text" class="form-control" placeholder="Confirm Password" required="required">
+              </div>
+                      
+              <div class="form-group">
+                <input type="submit" class="btn btn-primary btn-block btn-lg" value="Sign Up">
+              </div>
+                      
+            </form>       
+            
+          </div>
+          <div class="modal-footer">
+            <a href="#">Forgot Password?</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+     <!-- Modal HTML -->
+     <div id="myModal3" class="modal fade">
+      <div class="modal-dialog modal-createpost">
+        <div class="modal-content">
+          <div class="modal-header">        
+            <h4 class="modal-title">Pen your Post</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          </div>
+               
+               <label for="fname">Title </label><br>
+       <input type="text" id="fname" name="fname"><br><br>
+               
+               <label for="fname">Content</label><br>
+       <input type="text" id="fname" name="fname" style="width:550px; height:300px"><br><br>
+               
+
+              <div class="form-group">
+                <input type="submit" class="btn btn-primary btn-block" value="Create">
+              </div>
+            </form>       
+            
+          </div>
+        </div>
+      </div>
+     </div>       
 
 </body>
 
