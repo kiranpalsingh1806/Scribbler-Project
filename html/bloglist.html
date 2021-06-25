@@ -12,7 +12,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 
-<body>
+<body style="background-color: #fea500;">
     
     <div class="header" id="wrapper">
         <span>
@@ -27,51 +27,122 @@
 
     <div class="clearfix postslist">
 
-      <div id="demo1" class="box" style="background-color:#bbb">
+      <div id="demo1" class="box">
         <div class="nameSection">
             <h5 class="nameSection2">Jimi</h5>
         </div>
-        <button class="btn demobutton" onclick="myFunction1()"><i class="fa fa-trash"></i></button>
-      <h4 class="postsHeading">Hello there! This is post 1</h4>
-      <p>Some text inside the box.</p>
+        <button class="btn demobutton" onclick="document.getElementById('id01').style.display='block'" href="#myModal" class="trigger-btn" data-toggle="modal" style="font-size: 25px;"><i class="fa fa-trash"></i></button>
+      <h4 class="postsHeading">Summer Trip 2nd Semester</h4>
+      <p>We went to Shimla in summer vacations. We were a group of 30 students of same section and visited many places of historical and cultural....</p>
       </div>
 
-      <div id="demo2" class="box" style="background-color:#bbb">
+      <div id="id01" class="modal">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span>
+        <form class="modal-content">
+          <div class="container">
+            <h1>Are you sure you want to delete this post?</h1>
+          
+            <div class="clearfix">
+              <button type="button " onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">No</button>
+              <button type="button" onclick="document.getElementById('id01').style.display='none'; myFunction1()" class="deletebtn">Yes</button>
+            </div>
+          </div>
+        </form>
+      </div>
+  
+
+
+      <div id="demo2" class="box">
         <div class="nameSection">
             <h5 class="nameSection2">Jimi</h5>
         </div>
-        <button class="btn demobutton" onclick="myFunction2()"><i class="fa fa-trash"></i></button>
-      <h4 class="postsHeading">Hello there! This is post 1</h4>
-      <p>Some text inside the box.</p>
+        <button class="btn demobutton" onclick="document.getElementById('id02').style.display='block'" href="#myModal" class="trigger-btn" data-toggle="modal" style="font-size: 25px;"><i class="fa fa-trash"></i></button>
+      <h4 class="postsHeading">Summer Trip 3rd Semester</h4>
+      <p>We went to Shimla in summer vacations. We were a group of 300 students of same section and visited many places of historical and cultural....</p>
       </div>
 
-      <div id="demo3" class="box" style="background-color:#bbb">
-        <div class="nameSection">
-            <h5 class="nameSection2">Jimi</h5>
-        </div>
-        <button class="btn demobutton" onclick="myFunction3()"><i class="fa fa-trash"></i></button>
-      <h4 class="postsHeading">Hello there! This is post 1</h4>
-      <p>Some text inside the box.</p>
+      <div id="id02" class="modal">
+        <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">×</span>
+        <form class="modal-content">
+          <div class="container">
+            <h1>Are you sure you want to delete this post?</h1>
+          
+            <div class="clearfix">
+              <button type="button " onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">No</button>
+              <button type="button" onclick="document.getElementById('id02').style.display='none'; myFunction2()" class="deletebtn">Yes</button>
+            </div>
+          </div>
+        </form>
       </div>
 
-      <div id="demo4" class="box" style="background-color:#bbb">
+      <div id="demo3" class="box">
         <div class="nameSection">
             <h5 class="nameSection2">Jimi</h5>
         </div>
-        <button class="btn demobutton" onclick="myFunction4()"><i class="fa fa-trash"></i></button>
-      <h4 class="postsHeading">Hello there! This is post 1</h4>
-      <p>Some text inside the box.</p>
+        <button class="btn demobutton" onclick="document.getElementById('id03').style.display='block'" href="#myModal" class="trigger-btn" data-toggle="modal" style="font-size: 25px;"><i class="fa fa-trash"></i></button>
+      <h4 class="postsHeading">Summer Trip 4th Semester</h4>
+      <p>We went to Shimla in summer vacations. We were a group of 3000 students of same section and visited many places of historical and cultural....</p>
       </div>
 
-      <div id="demo5" class="box" style="background-color:#bbb">
+      <div id="id03" class="modal">
+        <span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">×</span>
+        <form class="modal-content">
+          <div class="container">
+            <h1>Are you sure you want to delete this post?</h1>
+          
+            <div class="clearfix">
+              <button type="button " onclick="document.getElementById('id03').style.display='none'" class="cancelbtn">No</button>
+              <button type="button" onclick="document.getElementById('id03').style.display='none'; myFunction3()" class="deletebtn">Yes</button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div id="demo4" class="box">
         <div class="nameSection">
             <h5 class="nameSection2">Jimi</h5>
         </div>
-        <button class="btn demobutton" onclick="myFunction5()"><i class="fa fa-trash"></i></button>
-      <h4 class="postsHeading">Hello there! This is post 1</h4>
-      <p>Some text inside the box.</p>
+        <button class="btn demobutton" onclick="document.getElementById('id04').style.display='block'" href="#myModal" class="trigger-btn" data-toggle="modal" style="font-size: 25px;"><i class="fa fa-trash"></i></button>
+      <h4 class="postsHeading">Summer Trip 5th Semester</h4>
+      <p>We went to Shimla in summer vacations. We were a group of 1300 students of same section and visited many places of historical and cultural....</p>
       </div>
-    </div>
+
+      <div id="id04" class="modal">
+        <span onclick="document.getElementById('id04').style.display='none'" class="close" title="Close Modal">×</span>
+        <form class="modal-content">
+          <div class="container">
+            <h1>Are you sure you want to delete this post?</h1>
+          
+            <div class="clearfix">
+              <button type="button " onclick="document.getElementById('id04').style.display='none'" class="cancelbtn">No</button>
+              <button type="button" onclick="document.getElementById('id04').style.display='none'; myFunction4()" class="deletebtn">Yes</button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div id="demo5" class="box">
+        <div class="nameSection">
+            <h5 class="nameSection2">Jimi</h5>
+        </div>
+        <button class="btn demobutton" onclick="document.getElementById('id05').style.display='block'" href="#myModal" class="trigger-btn" data-toggle="modal" style="font-size: 25px;"><i class="fa fa-trash"></i></button>
+      <h4 class="postsHeading">Summer Trip 6th Semester</h4>
+      <p>We went to Shimla in summer vacations. We were a group of 9000 students of same section and visited many places of historical and cultural....</p>
+      </div>
+
+      <div id="id05" class="modal">
+        <span onclick="document.getElementById('id05').style.display='none'" class="close" title="Close Modal">×</span>
+        <form class="modal-content">
+          <div class="container">
+            <h1>Are you sure you want to delete this post?</h1>
+          
+            <div class="clearfix">
+              <button type="button " onclick="document.getElementById('id05').style.display='none'" class="cancelbtn">No</button>
+              <button type="button" onclick="document.getElementById('id05').style.display='none'; myFunction5()" class="deletebtn">Yes</button>
+            </div>
+          </div>
+        </form>
+      </div>
 
 </body>
 </html>
