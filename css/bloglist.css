@@ -112,6 +112,13 @@ h5{
   right: 5px;
 }
 
+.demobutton2{
+  background-color: lightgrey;
+  position: absolute;
+  bottom: 5px;
+  right: 15px;
+}
+
 .postsHeading{
 
 }
