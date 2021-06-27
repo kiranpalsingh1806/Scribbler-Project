@@ -23,3 +23,17 @@ function addComment(id){
     showComments(listId);
     document.getElementById('menuList').innerHTML +='<li>'+id.value+"</li>";
 }
+
+// const paragraph = document.getElementById("edit");
+// const edit_button = document.getElementById("1");
+
+// function toggle(button)
+// { if(document.getElementById("1").value=="SAVE"){  document.getElementById("1").value="EDIT";
+//  paragraph.contentEditable = false;
+//   paragraph.style.backgroundColor = "white";}
+ 
+// else if(document.getElementById("1").value=="EDIT"){   document.getElementById("1").value="SAVE";
+//  paragraph.contentEditable = true;
+//   paragraph.style.backgroundColor = "white"
+//  }
+// }

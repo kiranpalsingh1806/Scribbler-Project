@@ -30,10 +30,13 @@
         <h3 style="text-align: center; padding: 10px;">The Legacy of Jimi Hendrix </h3>
         <div>
             <h4 class="postCreator">Jimi</h4>
-            <button class="editButton" >Edit</button>
+            <!-- <button class="editButton" type="button" id="1" value="EDIT" style="color:blue"
+       onclick="toggle(this);" >Edit</button> -->
+       <input class="editButton" type="button" id="1" value="EDIT" style="color:blue"
+       onclick="toggle(this);">
         </div>
 
-        <p class="postPara">
+        <p class="postPara" id="edit">
                 Jimi Hendrix was arguably the greatest instrumentalist in the history of rock music.[1] Hendrix expanded the range and vocabulary of the electric guitar into areas no musician had
                 ever ventured before. His boundless drive, technical ability and creative application of such effects as distortion forever transformed the sound of rock and roll. While creating his
                 unique musical voice and guitar style, Hendrix synthesized diverse genres, including blues, R&B, soul, British rock, American folk music, 1950s rock and roll, psychedelic and jazz.
@@ -76,6 +79,22 @@
         </div>
         
     </div>
+
+    <script>
+    const paragraph = document.getElementById("edit");
+    const edit_button = document.getElementById("1");
+
+    function toggle(button)
+    { if(document.getElementById("1").value=="SAVE"){  document.getElementById("1").value="EDIT";
+     paragraph.contentEditable = false;
+      paragraph.style.backgroundColor = "white";}
+     
+    else if(document.getElementById("1").value=="EDIT"){   document.getElementById("1").value="SAVE";
+     paragraph.contentEditable = true;
+      paragraph.style.backgroundColor = "lightgrey";
+     }
+    }
+    </script>
 
 
 </body>
