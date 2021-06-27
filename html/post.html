@@ -52,9 +52,27 @@
         </div>
 
         <div class="commentSection">
-            <textarea rows="4" cols="100" placeholder="Comment here..."></textarea>
-            <br>
-            <button>Comment</button>
+            <div class="container">
+                    <div class="board-container">
+
+                        <div class="add-board-block">
+                            <input type="text" id = "newBoardText" value="" placeholder="Write your comment here" style="width: 80%;">
+                        </div>
+
+                        <button id="add-board-btn" class="commentButton" onclick="addComment(newBoardText)">Comment</button>
+
+                        <div id = "boardBlockList">
+
+                        <div class="commentsList">
+                            <ul id="menuList">
+
+                            </ul>
+                        </div>
+                            
+                        </div>
+                        
+                    </div>
+                </div>
         </div>
         
     </div>
