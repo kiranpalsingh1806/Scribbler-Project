@@ -32,7 +32,7 @@
             <h4 class="postCreator">Jimi</h4>
             <!-- <button class="editButton" type="button" id="1" value="EDIT" style="color:blue"
        onclick="toggle(this);" >Edit</button> -->
-       <input class="editButton" type="button" id="1" value="EDIT" style="color:blue"
+       <input class="btn editButton" type="button" id="1" value="EDIT" style="background-color: blue; color:white;"
        onclick="toggle(this);">
         </div>
 
@@ -50,8 +50,9 @@
         </p>
 
         <div class="likeSection">
-            <button class="likeButton"> Like</button>
-            <p>Be the first one to Like</p>
+            <input class="likeButton btn" type="button" id="2" value="Like" style="background-color: blue; color:white;"
+                   onclick="toggle1(this);">
+            <p id="likePara">Be the first one to Like</p>
         </div>
 
         <div class="commentSection">
@@ -62,7 +63,7 @@
                             <input type="text" id = "newBoardText" value="" placeholder="Write your comment here" style="width: 80%;">
                         </div>
 
-                        <button id="add-board-btn" class="commentButton" onclick="addComment(newBoardText)">Comment</button>
+                        <button id="add-board-btn" class="commentButton" onclick="addComment(newBoardText)" style="background-color: deepskyblue; border-radius: 5px;">Comment</button>
 
                         <div id = "boardBlockList">
 
@@ -77,6 +78,94 @@
                     </div>
                 </div>
         </div>
+
+        <!-- Sign in Modal -->
+    <!-- Modal HTML -->
+    <div id="myModal" class="modal fade">
+      <div class="modal-dialog modal-login">
+        <div class="modal-content">
+          <div class="modal-header">        
+            <h4 class="modal-title">Welcome Back</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          </div>
+          <div class="modal-body">
+            <form action="/examples/actions/confirmation.php" method="post">
+
+              <label>Username</label>
+              <div class="form-group">
+                <i class="fa fa-user"></i>
+                <input type="text" class="form-control" placeholder="Username" required="required">
+              </div>
+
+              <label>Password</label>
+              <div class="form-group">
+                <i class="fa fa-lock"></i>
+                <input type="password" class="form-control" placeholder="Password" required="required">         
+              </div>
+              <div class="form-group">
+                <input type="submit" class="btn btn-primary btn-block btn-lg" value="Login">
+              </div>
+            </form>         
+          </div>
+          <div class="modal-footer">
+            <a href="#">Forgot Password?</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+<!-- Sign Up Modal -->
+    <!-- Modal HTML -->
+    <div id="myModal2" class="modal fade">
+      <div class="modal-dialog modal-signup">
+        <div class="modal-content">
+          <div class="modal-header">        
+            <h4 class="modal-title">Get Started</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          </div>
+          <div class="modal-body">
+            <form action="/examples/actions/confirmation.php" method="post">
+                      
+                      <label>Full Name</label>
+              <div class="form-group">
+                <i class="fa fa-user"></i>
+                          
+                <input type="text" class="form-control" placeholder="Full Name" required="required">
+              </div>
+                      
+                      <label>Username</label>
+              <div class="form-group">
+                <i class="fa fa-user"></i>
+                          
+                <input type="text" class="form-control" placeholder="Username" required="required">
+              </div>
+                      <label>Password</label>
+              <div class="form-group">
+                <i class="fa fa-lock"></i>
+                <input type="password" class="form-control" placeholder="Password" required="required">         
+              </div>
+                      
+                      <label>Confirm Password</label>
+              <div class="form-group">
+                <i class="fa fa-user"></i>
+                          
+                <input type="text" class="form-control" placeholder="Confirm Password" required="required">
+              </div>
+                      
+              <div class="form-group">
+                <input type="submit" class="btn btn-primary btn-block btn-lg" value="Sign Up">
+              </div>
+                      
+            </form>       
+            
+          </div>
+          <div class="modal-footer">
+            <a href="#">Forgot Password?</a>
+          </div>
+        </div>
+      </div>
+    </div>
         
     </div>
 
@@ -92,6 +181,17 @@
     else if(document.getElementById("1").value=="EDIT"){   document.getElementById("1").value="SAVE";
      paragraph.contentEditable = true;
       paragraph.style.backgroundColor = "lightgrey";
+     }
+    }
+
+    const edit_button2 = document.getElementById("2");
+    function toggle1(button)
+    { if(document.getElementById("2").value=="Like"){  document.getElementById("2").value="Liked";
+    document.getElementById("likePara").innerHTML = "1 person liked this post";
+     }
+     
+    else if(document.getElementById("2").value=="Liked"){   document.getElementById("2").value="Like";
+    document.getElementById("likePara").innerHTML = "Be the first one to like this post";
      }
     }
     </script>
